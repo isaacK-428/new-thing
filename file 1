@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> free choice game </title>
+    </head>
+    <body>
+        
+        <h1>dodging game</h1>
+        
+        <ul>
+            <li> <a href = "https://www.khanacademy.org/computer-programming/oh-noes-dash/5008424545402880"> final version</a></li>
+                        <li><a href = "https://www.khanacademy.org/computer-programming/dodging-game-good-version/5387959010967552">  2nd version </a></li>
+                                                <li><a href = "https://www.khanacademy.org/computer-programming/game/6518064345104384">  1st version </a></li>
+<h1>reflection on the project</h1>
+<p>
+for this project I wanted to make a functioning game on javascript the first one wasnt so good as it required me to edit the code in about <strong>5</strong> places if I wanted to add another block. I fixed this in the end project by making a few arrays and doing something simillar to the make it rain project but changing the y values every time it cycled around.Now I just add one number to the Xpos array to make another block. Some problems I had with it For the final one I made a thing that displays a comment based on score wich took a while and sometimes cubes would glitch at the edges because of them being able to come from both sides so I covered it up with squares.I think I did especially good with the hit boxes and how polished it is. for improvements for next time I want to maybe add a powerup thing or/and a menu also for the last one I made a random comment show up at the end based on your score
+</p>
+
+
+        </ul>
+  
+    </body>
+    <style>
+        h1 {
+        color: magenta;    
+        }
+
+    </style>
+</html>
