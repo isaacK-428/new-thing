@@ -1,140 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>JS Scene</title>
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-    }
-    canvas {
-      display: block;
-      margin: auto;
-      background: #222;
-    }
-  </style>
-</head>
-<body>
+  <body>
 
-<canvas id="scene" width="600" height="400"></canvas>
+    <canvas id="c" width="300" height="150"></canvas>
 
-<script>
-  // get the canvas
-  const canvas = document.getElementById("scene");
-  const ctx = canvas.getContext("2d");
+    <script>
+      const canvas = document.getElementById("c");
+      const ctx = canvas.getContext("2d");
 
-  // object in the scene
-  const box = {
-    x: 50,
-    y: 180,
-    size: 40,
-    speed: 3
-  };
+      ctx.fillStyle = "black";
+      ctx.fillRect(50, 50, 50, 50);
+    </script>
 
-  // update + draw loop
-  function update() {
-    // move the box
-    box.x += box.speed;
-
-    // bounce off edges
-    if (box.x + box.size > canvas.width || box.x < 0) {
-      box.speed *= -1;
-    }
-
-    draw();
-    requestAnimationFrame(update);
-  }
-
-  function draw() {
-    // clear screen
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // draw box
-    ctx.fillStyle = "cyan";
-    ctx.fillRect(box.x, box.y, box.size, box.size);
-  }
-
-  // start the scene
-  update();
-</script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>gravity</title>
-    </head>
-    <body>
-
-<p>isaac newton created gravity</p>
-<p>gravity didnt exisist before isaac newton made it</p>
-<p>showering is unhealthy and bad for teenage boys</p>
-        <h6>this is a joke</h6>
-    </body>
-    
-</html> can you out just the canvas in
-
-
-
-html
-Copy code
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>gravity</title>
-        <style>
-            canvas {
-                display: block;
-                margin-top: 20px;
-                border: 1px solid black;
-            }
-        </style>
-    </head>
-    <body>
-
-        <p>isaac newton created gravity</p>
-        <p>gravity didnt exisist before isaac newton made it</p>
-        <p>showering is unhealthy and bad for teenage boys</p>
-        <h6>this is a joke</h6>
-
-        <!-- Canvas -->
-        <canvas id="scene" width="600" height="300"></canvas>
-
-        <!-- JavaScript -->
-        <script>
-            const canvas = document.getElementById("scene");
-            const ctx = canvas.getContext("2d");
-
-            let y = 20;
-            let velocity = 0;
-            const gravity = 0.5;
-
-            function update() {
-                velocity += gravity;
-                y += velocity;
-
-                // ground collision
-                if (y > canvas.height - 30) {
-                    y = canvas.height - 30;
-                    velocity *= -0.6; // bounce
-                }
-
-                draw();
-                requestAnimationFrame(update);
-            }
-
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = "blue";
-                ctx.fillRect(280, y, 40, 40);
-            }
-
-            update();
-        </script>
-
-    </body>
+  </body>
 </html>
